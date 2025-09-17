@@ -30,11 +30,11 @@ import java.util.Properties;
         info = @Info(
                 title = "OpenApi for Toda App",
                 version = "1.00",
-                description = "Open api for authentication-service as a part of Toda-App",
+                description = "Open api for authentication-service as a part of Task-Management-app",
                 termsOfService = "Terms of service",
                 contact = @Contact(
                         name = "amr",
-                        email = "amr.elhady@gmail.com"
+                        email = "amr.elhady.example@gmail.com"
                 ),
                 license = @License(
                         name = "licence name",
