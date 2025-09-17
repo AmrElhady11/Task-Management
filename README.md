@@ -44,7 +44,7 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
 
 ![Swagger Authentication Endpoints](https://github.com/AmrElhady11/Task-Management/blob/master/assests/ScreenShot1.jpeg)
 
-In addition to **Register, Login, and Task APIs**, the app also provides a **Logout API**:
+In addition to **Register, Login, the app also provides a **Logout API**:
 
 - `POST /api/auth/logout` → Invalidate the JWT token and log out the user.
 
