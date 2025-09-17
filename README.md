@@ -15,16 +15,16 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
 
 
 ## Technologies Used
-    - **Java 17**
-    - **Java Mail Sender**
-    - **Spring Boot 3**
+    - Java 17
+    - Java Mail Sender
+    - Spring Boot 3
       - Spring Web
       - Spring Data JPA
       - Spring Security (JWT)
     - OpenAPI and Swagger UI Documentation
-    - **MYSQL**
-    - **Lombok**
-    - **Hibernate**
+    - MYSQL
+    - Lombok
+    - Hibernate
 
 ## Entity Relationship Diagram
 
