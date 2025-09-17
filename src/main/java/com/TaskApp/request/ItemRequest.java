@@ -1,5 +1,7 @@
 package com.TaskApp.request;
 
+import com.TaskApp.enums.ItemPriority;
+import com.TaskApp.enums.ItemStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
