@@ -1,5 +1,11 @@
 package com.TaskApp.service.Impl;
 
+import com.TaskApp.entity.Item;
+import com.TaskApp.entity.ItemDetails;
+import com.TaskApp.entity.User;
+import com.TaskApp.exception.NotFoundException;
+import com.TaskApp.repository.ItemDetailsRepository;
+import com.TaskApp.repository.ItemRepository;
 import com.TaskApp.request.ItemRequest;
 import com.TaskApp.response.ItemResponse;
 import com.TaskApp.service.ItemService;

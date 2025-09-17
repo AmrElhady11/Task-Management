@@ -1,5 +1,12 @@
 package com.TaskApp.service.Impl;
 
+import com.TaskApp.entity.Otp;
+import com.TaskApp.entity.User;
+import com.TaskApp.exception.ExpirationException;
+import com.TaskApp.exception.InvalidException;
+import com.TaskApp.exception.NotFoundException;
+import com.TaskApp.repository.OtpRepository;
+import com.TaskApp.repository.UserRepository;
 import com.TaskApp.service.OtpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
