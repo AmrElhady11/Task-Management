@@ -1,5 +1,6 @@
 package com.TaskApp.entity;
 
+import com.TaskApp.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
