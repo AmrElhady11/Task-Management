@@ -23,7 +23,7 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
 
 ## Entity Relationship Diagram
 
-![Entity Relationship Diagram](https://github.com/AmrElhady11/Task-Management/blob/master/assests/ERD.jpeg)
+![Entity Relationship Diagram](https://github.com/AmrElhady11/Task-Management/blob/master/assests/ERD.png)
 
 
 ## System Features and Use-Cases
@@ -51,5 +51,10 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
 ### Swagger - Tasks Endpoints
 
 ![Swagger Tasks Endpoints](https://github.com/AmrElhady11/Task-Management/blob/master/assests/ScreenShot3.jpeg)
+
+In addition to **Register, Login, and Task APIs**, the app also provides a **Logout API**:
+
+- `POST /api/auth/logout` → Invalidate the JWT token and log out the user.
+
 
 
