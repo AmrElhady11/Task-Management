@@ -8,6 +8,8 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
 - [System Features](#system-features-and-use-cases)
 - [Entity Relationship Diagram](#Entity-Relationship-Diagram)
 - [Screenshots](#Screenshots)
+- [Quick Used](#Quick-Start)
+
 
 
 
@@ -58,6 +60,43 @@ In addition to **Register, Login**, the app also provides a **Logout API**:
 
 ![Swagger Tasks Endpoints](https://github.com/AmrElhady11/Task-Management/blob/master/assests/ScreenShot3.jpeg)
 
+
+## Quick Start
+
+1. Clone the Repository
+bashgit clone https://github.com/AmrElhady11/Task-Management.git
+cd Task-Management
+2. Database Setup
+sql-- Login to MySQL
+mysql -u root -p
+
+-- Create database
+CREATE DATABASE task_management_db;
+
+3. Configure Application
+Update src/main/resources/application.properties:
+properties# Database Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/task_management_db
+spring.datasource.username=taskuser
+spring.datasource.password=yourpassword
+
+#Email Configuration
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=${MAIL_USERNAME:your-email@gmail.com}
+spring.mail.password=${MAIL_PASSWORD:your-app-password}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+# Server Configuration
+server.port=8080
+4. Build and Run
+bash# Install dependencies
+mvn clean install
+
+# Run the application
+mvn spring-boot:run
+The application will start at http://localhost:8080
 
 
 
