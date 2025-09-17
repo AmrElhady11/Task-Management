@@ -94,7 +94,7 @@ class ItemServiceImplTest {
             ItemDetails details = ItemDetails.builder().id(2).build();
             Item item = Item.builder().id(1).userID(mockUser.getId()).itemDetails(details).build();
 
-            when(itemRepository.findByIdAndUserId(1, mockUser.getId())).thenReturn(Optional.of(item));
+            when(itemRepository.findByIdAndUserID(1, mockUser.getId())).thenReturn(Optional.of(item));
 
             itemServiceImpl.deleteItem(1);
 
@@ -104,7 +104,7 @@ class ItemServiceImplTest {
 
         @Test
         void shouldThrowExceptionIfItemNotFound() {
-            when(itemRepository.findByIdAndUserId(1, mockUser.getId())).thenReturn(Optional.empty());
+            when(itemRepository.findByIdAndUserID(1, mockUser.getId())).thenReturn(Optional.empty());
 
             assertThrows(NotFoundException.class, () -> itemServiceImpl.deleteItem(1));
         }
@@ -118,7 +118,7 @@ class ItemServiceImplTest {
             ItemDetails details = ItemDetails.builder().id(2).build();
             Item item = Item.builder().id(1).title("Old Title").userID(mockUser.getId()).itemDetails(details).build();
 
-            when(itemRepository.findByIdAndUserId(1, mockUser.getId())).thenReturn(Optional.of(item));
+            when(itemRepository.findByIdAndUserID(1, mockUser.getId())).thenReturn(Optional.of(item));
             when(itemDetailsRepository.findById(2)).thenReturn(Optional.of(details));
 
             itemServiceImpl.updateItem(1, itemRequest);
@@ -132,7 +132,7 @@ class ItemServiceImplTest {
             ItemDetails details = ItemDetails.builder().id(2).build();
             Item item = Item.builder().id(1).userID(mockUser.getId()).itemDetails(details).build();
 
-            when(itemRepository.findByIdAndUserId(1, mockUser.getId())).thenReturn(Optional.of(item));
+            when(itemRepository.findByIdAndUserID(1, mockUser.getId())).thenReturn(Optional.of(item));
             when(itemDetailsRepository.findById(2)).thenReturn(Optional.empty());
 
             assertThrows(NotFoundException.class, () -> itemServiceImpl.updateItem(1, itemRequest));
@@ -148,19 +148,19 @@ class ItemServiceImplTest {
                     .id(2).description("Desc").status(ItemStatus.IN_PROGRESS).priority(ItemPriority.HIGH).build();
             Item item = Item.builder().id(1).title("Title").userID(mockUser.getId()).itemDetails(details).build();
 
-            when(itemRepository.findByIdAndUserId(1, mockUser.getId())).thenReturn(Optional.of(item));
+            when(itemRepository.findByIdAndUserID(1, mockUser.getId())).thenReturn(Optional.of(item));
             when(itemDetailsRepository.findById(2)).thenReturn(Optional.of(details));
 
             ItemResponse response = itemServiceImpl.findItem(1);
 
             assertEquals("Title", response.getTitle());
             assertEquals("Desc", response.getDescription());
-            verify(itemRepository).findByIdAndUserId(1, mockUser.getId());
+            verify(itemRepository).findByIdAndUserID(1, mockUser.getId());
         }
 
         @Test
         void shouldThrowExceptionIfItemNotFound() {
-            when(itemRepository.findByIdAndUserId(1, mockUser.getId())).thenReturn(Optional.empty());
+            when(itemRepository.findByIdAndUserID(1, mockUser.getId())).thenReturn(Optional.empty());
 
             assertThrows(NotFoundException.class, () -> itemServiceImpl.findItem(1));
         }
@@ -175,13 +175,13 @@ class ItemServiceImplTest {
                     .id(2).description("Desc").status(ItemStatus.IN_PROGRESS).priority(ItemPriority.HIGH).build();
             Item item = Item.builder().id(1).title("Title").userID(mockUser.getId()).itemDetails(details).build();
 
-            when(itemRepository.findByUserId(mockUser.getId())).thenReturn(List.of(item));
+            when(itemRepository.findByUserID(mockUser.getId())).thenReturn(List.of(item));
 
             List<ItemResponse> responses = itemServiceImpl.findAllItems();
 
             assertEquals(1, responses.size());
             assertEquals("Title", responses.get(0).getTitle());
-            verify(itemRepository).findByUserId(mockUser.getId());
+            verify(itemRepository).findByUserID(mockUser.getId());
         }
     }
 }
