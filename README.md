@@ -16,6 +16,7 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
 
 ## Technologies Used
     - **Java 17**
+    - **Java Mail Sender**
     - **Spring Boot 3**
       - Spring Web
       - Spring Data JPA
@@ -35,6 +36,7 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
 
 - User registration & login
 - Authentication with **JWT Tokens**
+- Email verification using **OTP (One-Time Password)** sent to the user’s email
 - Full CRUD operations for tasks:
   - Create / Read / Update / Delete
 - Each user can only manage their own tasks
