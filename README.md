@@ -6,6 +6,8 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
 
 - [Technologies Used](#technologies-used)
 - [System Features](#system-features-and-use-cases)
+- [Entity Relationship Diagram](#Entity-Relationship-Diagram)
+- [Screenshots](#Screenshots)
 
 
 
