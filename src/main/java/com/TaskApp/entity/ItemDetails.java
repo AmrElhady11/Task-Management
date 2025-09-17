@@ -1,7 +1,5 @@
 package com.TaskApp.entity;
 
-import com.TaskApp.enums.ItemPriority;
-import com.TaskApp.enums.ItemStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
