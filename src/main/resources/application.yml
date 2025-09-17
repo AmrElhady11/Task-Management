@@ -3,16 +3,16 @@ spring:
     name: Task-Management-App
   datasource:
     url: jdbc:mysql://localhost:3306/TaskDB
-    username: root
-    password: admin
+    username: 
+    password: 
   jpa:
     hibernate:
       ddl-auto: update
   mail:
     host: smtp.gmail.com
     port: 587
-    username: amr.elhady.programs@gmail.com
-    password: rsrn irvh kxiy zxxe
+    username: 
+    password: 
     properties:
       mail:
         smtp:
