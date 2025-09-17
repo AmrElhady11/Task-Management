@@ -12,9 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ChangePasswordRequest {
-    @NotNull
     private String oldPassword;
-    @NotNull
     private String newPassword;
     private String confirmPassword;
 
