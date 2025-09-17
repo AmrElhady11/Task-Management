@@ -1,7 +1,6 @@
 package com.TaskApp.entity;
 
 
-import com.TaskApp.enums.TokenType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
