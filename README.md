@@ -63,9 +63,11 @@ In addition to **Register, Login**, the app also provides a **Logout API**:
 
 ## Quick Start
 
-1. Clone the Repository
-bashgit clone https://github.com/AmrElhady11/Task-Management.git
+### Clone the Repository
+```bash
+git clone https://github.com/AmrElhady11/Task-Management.git
 cd Task-Management
+
 2. Database Setup
 sql-- Login to MySQL
 mysql -u root -p
