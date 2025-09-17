@@ -25,6 +25,7 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
     - MYSQL
     - Lombok
     - Hibernate
+    - Junit 5
 
 ## Entity Relationship Diagram
 
