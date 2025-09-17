@@ -87,7 +87,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<ItemResponse> findAllItems() {
-        List<Item> items = itemRepository.findByUserId(getUserId());
+        List<Item> items = itemRepository.findByUserID(getUserId());
         List<ItemResponse> itemResponses = new ArrayList<>();
             items.forEach((item) -> {
                 ItemResponse response = ItemResponse.builder()
@@ -109,6 +109,6 @@ public class ItemServiceImpl implements ItemService {
         return user.getId();
     }
     private Item getItemByIdAndUserId(int itemId) {
-        return itemRepository.findByIdAndUserId(itemId, getUserId()).orElseThrow(()-> new NotFoundException(String.format("Item with ID %d not found", itemId)));
+        return itemRepository.findByIdAndUserID(itemId, getUserId()).orElseThrow(()-> new NotFoundException(String.format("Item with ID %d not found", itemId)));
     }
 }

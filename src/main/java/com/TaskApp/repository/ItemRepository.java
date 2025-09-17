@@ -8,8 +8,8 @@ import java.util.Optional;
 
 public interface ItemRepository extends JpaRepository<Item, Integer> {
     Optional<Item> findById(int id);
-    Optional<Item> findByIdAndUserId(int id, int userId);
+    Optional<Item> findByIdAndUserID(int id, int userId);
     void deleteById(int id);
-    List<Item> findByUserId(int userId);
+    List<Item> findByUserID(int userId);
 
 }
