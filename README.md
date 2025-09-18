@@ -53,7 +53,7 @@ It includes **JWT Authentication** to secure the APIs and associates tasks with 
 
 In addition to **Register, Login**, the app also provides a **Logout API**:
 
-- `POST /api/auth/logout` → Invalidate the JWT token and log out the user.
+- `Get /api/auth/logout` → Invalidate the JWT token and log out the user.
 
 ### Swagger - Account Endpoints
 
